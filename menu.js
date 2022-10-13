@@ -2,16 +2,9 @@ import pg from 'pg'
 import readline from 'readline-sync'
 const { Pool } = pg
 
+import { creds } from "./credential2.js"
 
-const pool = new Pool(
-    {
-        host: "sql.bocacode.com",
-        database: "bocacode",
-        user: "bocacode",
-        password: "BocaCode1122BocaCode3344$$^^",
-        port: 5432
-    }
-)
+const pool = new Pool(creds);
 
 const query = `select * from customers `
 
@@ -21,6 +14,9 @@ pool.query(query, (err, data) => {
         return
     }
     console.log(data)
-   // console.table(data.rows)
-     pool.end()
+    console.table(data.rows)
+    pool.end()
 })
+
+
+

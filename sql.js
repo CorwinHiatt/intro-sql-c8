@@ -18,15 +18,10 @@
 import pg from "pg"
 const { Client, Pool } = pg
 
-const pool = new Pool(
-    {
-        host: "sql.bocacode.com",
-        database: "bocacode",
-        user: "bocacode",
-        password: "BocaCode1122BocaCode3344$$^^",
-        port: 5432
-    }
-)
+
+    import {creds} from "./credential2.js"
+    const pool = new Pool(creds)
+
 
 const query = `select * from 
 customers order by 
