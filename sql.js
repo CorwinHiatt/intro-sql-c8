@@ -23,7 +23,7 @@ const pool = new Pool(
         host: "sql.bocacode.com",
         database: "bocacode",
         user: "bocacode",
-        password: "bocacode",
+        password: "BocaCode1122BocaCode3344$$^^",
         port: 5432
     }
 )
